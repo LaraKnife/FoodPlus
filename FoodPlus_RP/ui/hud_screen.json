@@ -1,0 +1,60 @@
+{
+  "hud_screen": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "target_control": "hud_player_hotbar_renderer/hotbar_hunger_panel",
+        "value": {
+          "foodplus_preview_grid": {
+            "type": "grid",
+            "size": [80, 9],
+            "anchor_from": "top_right",
+            "anchor_to": "top_right",
+            "grid_dimensions": [10, 1],
+            "grid_item_template": "hud_screen.hunger_preview_icon",
+            "collection_name": "hunger_preview_collection",
+            "bindings": [
+              {
+                "binding_type": "global",
+                "binding_name": "#dynamic_properties",
+                "binding_name_override": "#player_props"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#player_props.current_item_nutrition)",
+                "target_property_name": "#grid_item_total"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(#player_props.current_item_nutrition > 0)",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "target_control": "hud_screen",
+        "value": {
+          "hunger_preview_icon@common.empty_panel": {
+            "type": "panel",
+            "size": [8, 9],
+            "controls": [
+              {
+                "icon_image": {
+                  "type": "image",
+                  "texture": "textures/ui/hunger_effect_full",
+                  "alpha": 0.45,
+                  "size": [9, 9]
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
