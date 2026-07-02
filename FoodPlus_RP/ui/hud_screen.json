@@ -4,51 +4,279 @@
       {
         "array_name": "controls",
         "operation": "insert_back",
-        "target_control": "hud_player_hotbar_renderer/hotbar_hunger_panel",
+        "target_control": "root_panel",
         "value": {
-          "foodplus_preview_grid": {
-            "type": "grid",
-            "size": [80, 9],
-            "anchor_from": "top_right",
-            "anchor_to": "top_right",
-            "grid_dimensions": [10, 1],
-            "grid_item_template": "hud_screen.hunger_preview_icon",
-            "collection_name": "hunger_preview_collection",
-            "bindings": [
-              {
-                "binding_type": "global",
-                "binding_name": "#dynamic_properties",
-                "binding_name_override": "#player_props"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "(#player_props.current_item_nutrition)",
-                "target_property_name": "#grid_item_total"
-              },
-              {
-                "binding_type": "view",
-                "source_property_name": "(#player_props.current_item_nutrition > 0)",
-                "target_property_name": "#visible"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "array_name": "controls",
-        "operation": "insert_back",
-        "target_control": "hud_screen",
-        "value": {
-          "hunger_preview_icon@common.empty_panel": {
+          "foodplus_overlay": {
             "type": "panel",
-            "size": [8, 9],
+            "anchor_from": "bottom_middle",
+            "anchor_to": "bottom_middle",
+            "size": [81, 9],
+            "offset": [51, -39],
+            "visible": "(query.property('foodplus:has_nutrition'))",
             "controls": [
               {
-                "icon_image": {
-                  "type": "image",
-                  "texture": "textures/ui/hunger_effect_full",
-                  "alpha": 0.45,
-                  "size": [9, 9]
+                "nutrition_layer": {
+                  "type": "panel",
+                  "controls": [
+                    {
+                      "icon_n_1": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [0, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 1)"
+                      }
+                    },
+                    {
+                      "icon_n_2": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-8, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 3)"
+                      }
+                    },
+                    {
+                      "icon_n_3": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-16, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 5)"
+                      }
+                    },
+                    {
+                      "icon_n_4": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-24, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 7)"
+                      }
+                    },
+                    {
+                      "icon_n_5": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-32, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 9)"
+                      }
+                    },
+                    {
+                      "icon_n_6": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-40, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 11)"
+                      }
+                    },
+                    {
+                      "icon_n_7": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-48, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 13)"
+                      }
+                    },
+                    {
+                      "icon_n_8": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-56, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 15)"
+                      }
+                    },
+                    {
+                      "icon_n_9": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-64, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 17)"
+                      }
+                    },
+                    {
+                      "icon_n_10": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-72, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:nutrition') >= 19)"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "saturation_layer": {
+                  "type": "panel",
+                  "layer": 1,
+                  "controls": [
+                    {
+                      "icon_s_1": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [0, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 1)"
+                      }
+                    },
+                    {
+                      "icon_s_2": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-8, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 3)"
+                      }
+                    },
+                    {
+                      "icon_s_3": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-16, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 5)"
+                      }
+                    },
+                    {
+                      "icon_s_4": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-24, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 7)"
+                      }
+                    },
+                    {
+                      "icon_s_5": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-32, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 9)"
+                      }
+                    },
+                    {
+                      "icon_s_6": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-40, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 11)"
+                      }
+                    },
+                    {
+                      "icon_s_7": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-48, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 13)"
+                      }
+                    },
+                    {
+                      "icon_s_8": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-56, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 15)"
+                      }
+                    },
+                    {
+                      "icon_s_9": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-64, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 17)"
+                      }
+                    },
+                    {
+                      "icon_s_10": {
+                        "type": "image",
+                        "texture": "textures/ui/hunger_effect_full",
+                        "color": [1.0, 0.8, 0.0],
+                        "size": [9, 9],
+                        "anchor_from": "top_right",
+                        "anchor_to": "top_right",
+                        "offset": [-72, 0],
+                        "alpha": "(math.abs(math.sin(query.life_time * 250)) * 0.6 + 0.4)",
+                        "visible": "(query.property('foodplus:saturation') >= 19)"
+                      }
+                    }
+                  ]
                 }
               }
             ]
