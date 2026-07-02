@@ -10,11 +10,13 @@
       "properties": {
         "foodplus:nutrition": {
           "type": "int",
+          "range": [0, 100],
           "default": 0,
           "client_sync": true
         },
         "foodplus:saturation": {
           "type": "float",
+          "range": [0.0, 100.0],
           "default": 0.0,
           "client_sync": true
         },
