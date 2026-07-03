@@ -1,26 +1,40 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Lógica FoodPlus. Por LaraKnife.",
-    "name": "FoodPlus (Behavior)",
-    "uuid": "ce005f33-5883-405c-8a4a-331ac1988528",
+    "description": "By LaraKnife",
+    "name": "§c§cFoodPlus BP",
+    "uuid": "9c76ad7f-97ff-4e52-be47-c9110ae0c815",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 21, 0]
+    "min_engine_version": [1, 21, 0],
+    "authors": ["LaraKnife"]
   },
   "modules": [
     {
-      "description": "Script de cálculo de comida",
+      "description": "FoodPlus BP",
       "type": "script",
       "language": "javascript",
-      "uuid": "1f1c1b04-be67-4172-bfcf-83cd611adbe6",
+      "uuid": "e23a3af6-e33e-4405-aff4-853f3d7cba5e",
       "version": [1, 0, 0],
       "entry": "scripts/main.js"
+    },
+    {
+      "type": "data",
+      "uuid": "904a69ac-c839-44b1-8df4-1c805d8094c8",
+      "version": [1, 0, 0]
     }
   ],
+  "metadata": {
+    "product_type": "addon"
+  },
+
   "dependencies": [
     {
+      "uuid": "3f3e3738-27cb-4313-b2f9-fd37b9679424",
+      "version": [1, 0, 0]
+    },
+    {
       "module_name": "@minecraft/server",
-      "version": "2.9.0-beta"
+      "version": "2.1.0"
     }
   ]
 }

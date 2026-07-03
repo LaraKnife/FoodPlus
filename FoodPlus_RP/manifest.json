@@ -1,23 +1,26 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Visuales e interfaz para FoodPlus. Por LaraKnife.",
-    "name": "FoodPlus (Resource)",
-    "uuid": "4589d09b-e758-44e0-ac48-c22f7605a7bb",
+    "description": "By LaraKnife",
+    "name": "§c§cFoodPlus RP",
+    "uuid": "3f3e3738-27cb-4313-b2f9-fd37b9679424",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 21, 0]
+    "min_engine_version": [1, 21, 0],
+    "authors": ["LaraKnife"]
   },
-  "modules": [
+  "metadata": {
+    "product_type": "addon"
+  },
+  "dependencies": [
     {
-      "description": "UI Module",
-      "type": "resources",
-      "uuid": "e3235837-82e6-4ee9-9a97-109fbc593e53",
+      "uuid": "9c76ad7f-97ff-4e52-be47-c9110ae0c815",
       "version": [1, 0, 0]
     }
   ],
-  "dependencies": [
+  "modules": [
     {
-      "uuid": "ce005f33-5883-405c-8a4a-331ac1988528",
+      "type": "resources",
+      "uuid": "81f8b646-b626-4c73-a716-465517f4fbe6",
       "version": [1, 0, 0]
     }
   ]
