@@ -25,7 +25,6 @@ Developed by **LaraKnife**.
 1. Download the `.mcaddon` file from the releases section.
 2. Double-click the file to automatically import it into Minecraft Bedrock.
 3. Apply the **FoodPlus BP** (Behavior Pack) and **FoodPlus RP** (Resource Pack) to your world.
-4. **Important:** Ensure you enable the **Beta APIs** experimental toggle in your world settings for the scripts to function properly.
 
 ## 🛠️ Technical Details (For Developers)
 
