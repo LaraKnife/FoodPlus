@@ -1,0 +1,164 @@
+{
+  "namespace": "foodplus",
+
+  "saturation_panel_non_centered": {
+    "$key": "!fp.",
+    "$atext": "$actionbar_text",
+
+    "type": "panel",
+    "size": [0, 0],
+    "layer": 200,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "visible": "(('%.4s' * $atext) = $key)",
+
+    "controls": [
+      { "0@foodplus.render_full": { "offset": [0, 0], "$i": 19 } },
+      { "1@foodplus.render_half": { "offset": [0, 0], "$i": 18 } },
+      { "2@foodplus.render_full": { "offset": [8, 0], "$i": 17 } },
+      { "3@foodplus.render_half": { "offset": [8, 0], "$i": 16 } },
+      { "4@foodplus.render_full": { "offset": [16, 0], "$i": 15 } },
+      { "5@foodplus.render_half": { "offset": [16, 0], "$i": 14 } },
+      { "6@foodplus.render_full": { "offset": [24, 0], "$i": 13 } },
+      { "7@foodplus.render_half": { "offset": [24, 0], "$i": 12 } },
+      { "8@foodplus.render_full": { "offset": [32, 0], "$i": 11 } },
+      { "9@foodplus.render_half": { "offset": [32, 0], "$i": 10 } },
+      { "10@foodplus.render_full": { "offset": [40, 0], "$i": 9 } },
+      { "11@foodplus.render_half": { "offset": [40, 0], "$i": 8 } },
+      { "12@foodplus.render_full": { "offset": [48, 0], "$i": 7 } },
+      { "13@foodplus.render_half": { "offset": [48, 0], "$i": 6 } },
+      { "14@foodplus.render_full": { "offset": [56, 0], "$i": 5 } },
+      { "15@foodplus.render_half": { "offset": [56, 0], "$i": 4 } },
+      { "16@foodplus.render_full": { "offset": [64, 0], "$i": 3 } },
+      { "17@foodplus.render_half": { "offset": [64, 0], "$i": 2 } },
+      { "18@foodplus.render_full": { "offset": [72, 0], "$i": 1 } },
+      { "19@foodplus.render_half": { "offset": [72, 0], "$i": 0 } }
+    ]
+  },
+
+  "saturation_factory_non_centered": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "saturation_panel_non_centerd@foodplus.saturation_panel_non_centered"
+      }
+    }
+  },
+
+  "saturation_panel_clasic": {
+    "$key": "!fp.",
+    "$atext": "$actionbar_text",
+
+    "type": "panel",
+    "size": ["100%c", 9],
+    "offset": [120, -10],
+    "layer": 200,
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "visible": "(('%.4s' * $atext) = $key)",
+
+    "controls": [
+      { "0@foodplus.render_full": { "offset": [0, 0], "$i": 19 } },
+      { "1@foodplus.render_half": { "offset": [0, 0], "$i": 18 } },
+      { "2@foodplus.render_full": { "offset": [8, 0], "$i": 17 } },
+      { "3@foodplus.render_half": { "offset": [8, 0], "$i": 16 } },
+      { "4@foodplus.render_full": { "offset": [16, 0], "$i": 15 } },
+      { "5@foodplus.render_half": { "offset": [16, 0], "$i": 14 } },
+      { "6@foodplus.render_full": { "offset": [24, 0], "$i": 13 } },
+      { "7@foodplus.render_half": { "offset": [24, 0], "$i": 12 } },
+      { "8@foodplus.render_full": { "offset": [32, 0], "$i": 11 } },
+      { "9@foodplus.render_half": { "offset": [32, 0], "$i": 10 } },
+      { "10@foodplus.render_full": { "offset": [40, 0], "$i": 9 } },
+      { "11@foodplus.render_half": { "offset": [40, 0], "$i": 8 } },
+      { "12@foodplus.render_full": { "offset": [48, 0], "$i": 7 } },
+      { "13@foodplus.render_half": { "offset": [48, 0], "$i": 6 } },
+      { "14@foodplus.render_full": { "offset": [56, 0], "$i": 5 } },
+      { "15@foodplus.render_half": { "offset": [56, 0], "$i": 4 } },
+      { "16@foodplus.render_full": { "offset": [64, 0], "$i": 3 } },
+      { "17@foodplus.render_half": { "offset": [64, 0], "$i": 2 } },
+      { "18@foodplus.render_full": { "offset": [72, 0], "$i": 1 } },
+      { "19@foodplus.render_half": { "offset": [72, 0], "$i": 0 } }
+    ]
+  },
+
+  "saturation_factory_clasic": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "saturation_panel_clasic@foodplus.saturation_panel_clasic"
+      }
+    }
+  },
+  "saturation_panel": {
+    "$key": "!fp.",
+    "$atext": "$actionbar_text",
+
+    "type": "panel",
+    "size": ["100%c", 9],
+    "offset": [100, -10],
+    "layer": 200,
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "visible": "(('%.4s' * $atext) = $key)",
+
+    "controls": [
+      { "0@foodplus.render_full": { "offset": [0, 0], "$i": 19 } },
+      { "1@foodplus.render_half": { "offset": [0, 0], "$i": 18 } },
+      { "2@foodplus.render_full": { "offset": [8, 0], "$i": 17 } },
+      { "3@foodplus.render_half": { "offset": [8, 0], "$i": 16 } },
+      { "4@foodplus.render_full": { "offset": [16, 0], "$i": 15 } },
+      { "5@foodplus.render_half": { "offset": [16, 0], "$i": 14 } },
+      { "6@foodplus.render_full": { "offset": [24, 0], "$i": 13 } },
+      { "7@foodplus.render_half": { "offset": [24, 0], "$i": 12 } },
+      { "8@foodplus.render_full": { "offset": [32, 0], "$i": 11 } },
+      { "9@foodplus.render_half": { "offset": [32, 0], "$i": 10 } },
+      { "10@foodplus.render_full": { "offset": [40, 0], "$i": 9 } },
+      { "11@foodplus.render_half": { "offset": [40, 0], "$i": 8 } },
+      { "12@foodplus.render_full": { "offset": [48, 0], "$i": 7 } },
+      { "13@foodplus.render_half": { "offset": [48, 0], "$i": 6 } },
+      { "14@foodplus.render_full": { "offset": [56, 0], "$i": 5 } },
+      { "15@foodplus.render_half": { "offset": [56, 0], "$i": 4 } },
+      { "16@foodplus.render_full": { "offset": [64, 0], "$i": 3 } },
+      { "17@foodplus.render_half": { "offset": [64, 0], "$i": 2 } },
+      { "18@foodplus.render_full": { "offset": [72, 0], "$i": 1 } },
+      { "19@foodplus.render_half": { "offset": [72, 0], "$i": 0 } }
+    ]
+  },
+
+  "saturation_factory": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_actionbar_text_factory",
+      "control_ids": {
+        "hud_actionbar_text": "saturation_panel@foodplus.saturation_panel"
+      }
+    }
+  },
+  "render_full": {
+    "$i|default": 0,
+
+    "type": "image",
+    "size": [9, 9],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "texture": "textures/saturation",
+
+    "visible": "(($atext - ('%.4s' * $atext)) > $i)"
+  },
+
+  "render_half": {
+    "$i|default": 0,
+
+    "type": "image",
+    "size": [9, 9],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "texture": "textures/saturation",
+    "clip_direction": "right",
+    "clip_ratio": 0.5,
+
+    "visible": "(($atext - ('%.4s' * $atext)) > $i)"
+  }
+}
